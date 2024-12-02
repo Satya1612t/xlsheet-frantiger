@@ -1,10 +1,10 @@
-import { Children, ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 type Props = {
   children: ReactNode
 }
 
-function Row({children}: Props) {
+function Row({ children }: Props) {
   return (
     <tr>{children}</tr>
   )
