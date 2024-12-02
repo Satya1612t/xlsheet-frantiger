@@ -1,9 +1,6 @@
-import { ReactNode } from "react"
 import Sheet from "../components/Sheet"
 
-type Props = {
-    children: ReactNode | string
-}
+type Props = {}
 
 function SheetContainer({}: Props) {
   return (

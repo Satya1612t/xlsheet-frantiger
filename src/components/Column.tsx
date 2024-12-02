@@ -6,7 +6,7 @@ type Props = {
 
 function Column({children}: Props) {
   return (
-    <td className='border w-24 h-6  border-gray-600 min-w-24'>{children}</td>
+    <td className='border w-24 h-6  border-gray-300 min-w-24'>{children}</td>
   )
 }
 
