@@ -4,6 +4,6 @@ export const SheetSizeState =  atom({
     key: 'SheetSize',
     default: {
         width: 2600,
-        height: 600,
+        height: 1000,
     }
 })
