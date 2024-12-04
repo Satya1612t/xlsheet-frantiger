@@ -11,14 +11,16 @@ export const CELL_HEIGHT = 25;
 export const CELL_WIDHT = 100;
 
 function Cell({ cellId }: CellProps) {
+
     const [cellValue, setCellValue] = useRecoilState<string>(CellValueState(cellId))
     const evaluatedCellValueState = useRecoilValue<string>(EvaluatedCellValueState(cellId))
-    console.log(evaluatedCellValueState); // here it is calculated but not update in div
     const [isEditMode, setIsEditMode] = useState(false);
     const cellRef = useRef(null);
     const changeLableToCell = () => setIsEditMode(true);
     const changeCellToLabel = () => setIsEditMode(false);
+    console.log(cellValue, cellId);
 
+    
     const handleCLickOutside = (event: MouseEvent) => {
         if ((event.target as HTMLElement)?.dataset?.cellId !== cellId) {
             changeCellToLabel();
@@ -27,7 +29,10 @@ function Cell({ cellId }: CellProps) {
 
     const handleUpdateCellValueState = (e: ChangeEvent<HTMLInputElement>) => {
         setCellValue(e.target.value);
+
     }
+
+    
 
     useEffect(() => {
         document.addEventListener('click', handleCLickOutside);

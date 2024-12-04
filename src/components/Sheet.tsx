@@ -8,7 +8,6 @@ import AxisCell from "./AxisCell"
 type Props = {}
 
 function Sheet({ }: Props) {
-
   const sheetSize = useRecoilValue(SheetSizeState);
   const numberOfColumns = sheetSize.width / CELL_WIDHT;
   const numberOfRows = sheetSize.height / CELL_HEIGHT;
@@ -41,3 +40,4 @@ function Sheet({ }: Props) {
 }
 
 export default Sheet
+
